@@ -1,0 +1,9 @@
+prerequisites:
+  python 3
+  requsts
+  beautifulsoup
+  
+This is still an early version of the script, but it does the job tho.
+It takes about 10 to 15 minutes to scrape all the submissions due to hackerrank rate limiting. It really depends on how many submissions you have.
+Changing the sleep time might get you IP banned off hackerrank due to too many requests so do keep that in mind but, since i dont have a static IP that wasn't much of a problem but just to be safe use a vpn.
+I'm planning to improve the script and find the sleep time that wont cause a timeout and create a user friendly GUI.
