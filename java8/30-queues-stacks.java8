@@ -1,0 +1,47 @@
+
+
+public class Solution {
+    // Write your code here.
+    class Node{
+        Node next;
+        char data;
+        public Node(char data){
+            this.data=data;
+        }
+    }    
+
+    private Node stackStart;
+    private Node queueStart;
+    private Node queueEnd;
+
+        public void enqueueCharacter(char data) {
+        if (queueStart == null) {
+            queueStart = new Node(data);
+            queueEnd = queueStart;
+        } else {
+            Node temp = new Node(data);
+            queueEnd.next = temp;
+            queueEnd = temp;
+        }
+    }
+
+    public char dequeueCharacter() {
+        char temp = queueStart.data;
+        queueStart = queueStart.next;
+        return temp;
+    }
+    public void pushCharacter(char data){
+        if(stackStart==null){
+            stackStart=new Node(data);
+        }
+        else{
+            Node temp=new Node(data);
+            temp.next=stackStart;
+            stackStart=temp;
+        }
+    }
+    public char popCharacter(){
+        char temp=stackStart.data;
+        stackStart=stackStart.next;
+        return temp;
+    }
